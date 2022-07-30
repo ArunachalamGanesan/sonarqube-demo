@@ -10,11 +10,15 @@
 	</parent>
 	<groupId>com.gainjavaknowledge</groupId>
 	<artifactId>sonarqube-demo</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>sonarqube-demo</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
+		<sonar.host.url>http://localhost:9000/</sonar.host.url>
+		<sonar.login>sqp_057075aff94258ee0bbf360dfd45977f14b30ddd</sonar.login>
+		<!--<sonar.login>admin</sonar.login>
+		<sonar.password>Arun@123#</sonar.password>  -->
 	</properties>
 	<dependencies>
 		<dependency>
@@ -28,6 +32,19 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	<distributionManagement>
+		<repository>
+			<id>nexus</id>
+			<name>nexus</name>
+			<url>http://13.232.248.114:8081/repository/flipkart-release/</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus</id>
+			<name>nexus snapshot</name>
+			<url>http://13.232.248.114:8081/repository/flipkart-snapshot/</url>
+		</snapshotRepository>
+
+	</distributionManagement>
 
 	<build>
 		<plugins>
